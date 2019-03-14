@@ -22,6 +22,7 @@ public:
     void setDelegate(RenderingEngineDelegate *delegate);
     void reshape(const float width, const float height);
     void render();
+    void update(const int dt);
 
 private:
     void setUp();

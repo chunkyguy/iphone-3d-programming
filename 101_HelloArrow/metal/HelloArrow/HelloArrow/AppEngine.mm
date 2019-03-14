@@ -39,6 +39,7 @@ private:
     MTKView *_view;
     RenderingEngineDelegateImpl *_rendererDelegate;
     std::unique_ptr<RenderingEngine> _renderer;
+    CFTimeInterval _lastTime;
 }
 
 + (instancetype)engineWithView:(MTKView *)view
@@ -50,6 +51,7 @@ private:
 {
     self = [super init];
     if (self) {
+        _lastTime = CACurrentMediaTime();
         _rendererDelegate = new RenderingEngineDelegateImpl(view);
         _view = view;
         [self setUp];
@@ -93,6 +95,11 @@ private:
 
 - (void)drawInMTKView:(nonnull MTKView *)view
 {
+    CFTimeInterval time = CACurrentMediaTime();
+    CFTimeInterval dt = time - _lastTime;
+    _lastTime = time;
+    
+    _renderer->update(static_cast<int>(dt * 1000.0f));
     _renderer->render();
 }
 

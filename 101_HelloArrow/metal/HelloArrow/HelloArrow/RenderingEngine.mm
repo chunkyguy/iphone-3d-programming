@@ -39,15 +39,19 @@ void RenderingEngine::setUp()
 void RenderingEngine::loadData()
 {
     Vertex data[] = {
-        // front
-        {.position = {-1.0f, 1.0f, 0.0f, 1.0f}, .color = {0.3f, 0.0f, 0.0f, 1.0f}},
-        {.position = {-1.0f, -1.0f, 0.0f, 1.0f}, .color = {0.7f, 0.0f, 0.0f, 1.0f}},
-        {.position = {1.0f, 1.0f, 0.0f, 1.0f}, .color = {0.6f, 0.0f, 0.0f, 1.0f}},
-        {.position = {1.0f, -1.0f, 0.0f, 1.0f}, .color = {0.9f, 0.0f, 0.0f, 1.0f}}
+        {.position = {-0.5f, -0.866, 0.0f, 1.0f},   .color = {1.0f, 1.0f, 0.5f, 1.0f}},
+        {.position = {0.5f, -0.866f, 0.0f, 1.0f},   .color = {1.0f, 1.0f, 0.5f, 1.0f}},
+        {.position = {0.0f, 1.0f, 0.0f, 1.0f},      .color = {1.0f, 1.0f, 0.5f, 1.0f}},
+        {.position = {-0.5f, -0.866f, 0.0f, 1.0f},  .color = {0.5f, 0.5f, 0.5f, 1.0f}},
+        {.position = {0.5f, -0.866f, 0.0f, 1.0f},   .color = {0.5f, 0.5f, 0.5f, 1.0f}},
+        {.position = {0.0f, -0.4f, 0.0f, 1.0f},     .color = {0.5f, 0.5f, 0.5f, 1.0f}}
     };
 
     buffer_ = [device_ newBufferWithBytes:data length:sizeof(data) options:MTLResourceOptionCPUCacheModeDefault];
 }
+
+void RenderingEngine::update(const int dt)
+{}
 
 void RenderingEngine::render()
 {
@@ -63,7 +67,7 @@ void RenderingEngine::render()
     id<MTLRenderCommandEncoder> commandEnc = [commandBuffer renderCommandEncoderWithDescriptor:delegate_->getRenderPassDescriptor()];
     [commandEnc setRenderPipelineState:renderPipeline_];
     [commandEnc setVertexBuffer:buffer_ offset:0 atIndex:0];
-    [commandEnc drawPrimitives:MTLPrimitiveTypeTriangleStrip vertexStart:0 vertexCount:4];
+    [commandEnc drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:6];
     [commandEnc endEncoding];
     
     [commandBuffer presentDrawable: delegate_->getDrawable()];
