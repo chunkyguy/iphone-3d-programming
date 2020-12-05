@@ -56,8 +56,8 @@ Get the source code to an individual sample by clicking its screenshot below.
 ------------------------------------------------------------
 
 # HelloArrow
-[![HelloArrow](HelloArrow/opengl/Screenshot.png)](HelloArrow/)
-[![HelloArrow](HelloArrow/metal/Screenshot.png)](HelloArrow/)
+[![HelloArrow](101_HelloArrow/opengl/Screenshot.png)](101_HelloArrow/opengl)
+[![HelloArrow](101_HelloArrow/metal/Screenshot.png)](101_HelloArrow/metal)
  
 
 # HelloCone
