@@ -19,6 +19,8 @@
 		4D8FB2C30F9EB4740055EDDB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8FB2C20F9EB4740055EDDB /* Icon.png */; };
 		4D8FB3730F9EC1010055EDDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FB3720F9EC1010055EDDB /* main.m */; };
 		4DFA4F820FFAFA13000826CD /* RenderingEngine1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA4F810FFAFA13000826CD /* RenderingEngine1.cpp */; };
+		79E02338257BE46D002644CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79E02337257BE46D002644CA /* LaunchScreen.storyboard */; };
+		79E0233D257BE4B0002644CA /* GLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79E0233C257BE4B0002644CA /* GLViewController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,9 @@
 		4D8FB2C20F9EB4740055EDDB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		4D8FB3720F9EC1010055EDDB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4DFA4F810FFAFA13000826CD /* RenderingEngine1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderingEngine1.cpp; sourceTree = "<group>"; };
+		79E02337257BE46D002644CA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		79E0233B257BE4B0002644CA /* GLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLViewController.h; sourceTree = "<group>"; };
+		79E0233C257BE4B0002644CA /* GLViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GLViewController.mm; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +75,8 @@
 				1D3623250D0F684500981E51 /* HelloArrowAppDelegate.mm */,
 				4D3135EB0F9A6649001FFC34 /* GLView.h */,
 				4D3135EC0F9A6649001FFC34 /* GLView.mm */,
+				79E0233B257BE4B0002644CA /* GLViewController.h */,
+				79E0233C257BE4B0002644CA /* GLViewController.mm */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -110,6 +117,7 @@
 				4D8FB2C20F9EB4740055EDDB /* Icon.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				4D77F28E10793BEB002D74C3 /* Default.png */,
+				79E02337257BE46D002644CA /* LaunchScreen.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -160,6 +168,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HelloArrow" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -184,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79E02338257BE46D002644CA /* LaunchScreen.storyboard in Resources */,
 				4D8FB2C30F9EB4740055EDDB /* Icon.png in Resources */,
 				4D77F28F10793BEB002D74C3 /* Default.png in Resources */,
 			);
@@ -197,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D3623260D0F684500981E51 /* HelloArrowAppDelegate.mm in Sources */,
+				79E0233D257BE4B0002644CA /* GLViewController.mm in Sources */,
 				4D3135ED0F9A6649001FFC34 /* GLView.mm in Sources */,
 				4D27E3B30F9ACD8200447247 /* RenderingEngine2.cpp in Sources */,
 				4D8FB3730F9EC1010055EDDB /* main.m in Sources */,
@@ -211,6 +223,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -225,6 +238,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HelloArrow_Prefix.pch;
