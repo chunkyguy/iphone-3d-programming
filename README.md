@@ -56,7 +56,11 @@ Get the source code to an individual sample by clicking its screenshot below.
 ------------------------------------------------------------
 
 # HelloArrow
+
+**OpenGL**
 [![HelloArrow](101_HelloArrow/opengl/Screenshot.png)](101_HelloArrow/opengl)
+
+**Metal**
 [![HelloArrow](101_HelloArrow/metal/Screenshot.png)](101_HelloArrow/metal)
  
 
